@@ -1,0 +1,554 @@
+@font-face {
+    font-family: "Plex";
+    src: url("fonts/IBMPlexSans-Regular.woff2") format("woff2"),
+         url("fonts/IBMPlexSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.woff2") format("woff2"),
+         url("fonts/Roboto-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    /* colors */
+    --primary-color: #eae9e3;
+    --secondary-color: #ffffff;
+    --tertiary-color: #819d8d;
+    --increase-color: #375a47;
+    --opaque-increase-color: #89a0936c;
+    --decrease-color: #9b4752;
+    --opaque-decrease-color: #ad767d75;
+    --accompanying-color: #829bd4;
+    --subtle-color: rgb(95, 93, 93);
+
+    /* fonts */
+    --primary-font: "Plex";
+    --secondary-font: "Roboto";
+    height: 100vh;
+
+}
+
+body {
+    margin: 5rem;
+    background-color: var(--primary-color);
+
+    /* Use the project's primary font with sensible fallbacks */
+    font-family: var(--primary-font), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.app {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+}
+
+header {
+    grid-column: 1 / -1; /* positioning */
+    display: grid;
+    grid-template-columns: subgrid;        /*  */
+}
+
+.left-header {
+    display: grid;
+    align-content: center;
+}
+
+.right-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: start;
+}
+
+.right-header__controls {
+    justify-self: end;
+    display: grid;
+    justify-items: space-between;
+    grid-template-columns: 2fr auto auto;
+    gap: 1rem;
+}
+
+.search{
+    display: grid;
+    grid-template-columns: 1fr auto;  
+    align-items: center;
+    gap: 10px;                       
+    background: #fff;
+    border-radius: 999px;              
+    padding: 8px 8px 8px 14px;         
+    max-width: 520px;
+    width: 500px;                   
+}
+
+.search input{
+  inline-size: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font: 16px/1.2 system-ui, sans-serif;
+  color: #1c1c1c;
+}
+.search input::placeholder{ color:#8a8a8a; }
+
+.search__icon{
+  grid-column: 2;
+  inline-size: 40px;
+  block-size: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: #1f2023;               /* dark circle */
+  color: #ffffff;
+  display: grid;
+  place-items: center;                /* center the SVG */
+  cursor: pointer;
+}
+
+.search:focus-within{
+  outline: 2px solid #b2abf2;         /* accent */
+  outline-offset: 2px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 7rem;
+    grid-auto-rows: minmax(auto, 350px);
+    align-content: center;
+    gap: 1rem;
+}
+
+
+.expenses  {
+    grid-column: 1 / span 3;
+}
+
+.clients {
+    grid-column: 4 / span 3;
+}
+
+.earnings {
+    grid-column: 7 / span 3;
+}
+
+.revenue {
+    grid-column: 10 / span 3;
+}
+
+.balance {
+    grid-row: 2 / 3;
+    grid-column: 1 / span 6;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.balance .card-body {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    height: 100%;
+}
+
+.balance-header {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.balance-title {
+    grid-column: 1 / 4;
+}
+
+.balance-range {
+    grid-column: 4 / -1;
+    justify-self: end;
+}
+
+.balance .card-media {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+}
+
+.balance-stats {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.stat-saves {
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 0.175rem;
+}
+
+.stat-balance {
+    grid-column: 5 / 6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.175rem;
+}
+
+.stat-value {
+    font-family: var(--secondary-font);
+    font-weight: 900;
+}
+
+.balance-range, .stat-label {
+    color: var(--accompanying-color);
+    font-weight: 600;
+}
+
+.stat-delta {
+    font-family: var(--primary-font);
+    font-weight: 100;
+    font-size: 0.675rem;
+    border-radius: 2rem;
+    padding: 0.125rem;
+    width: 3rem;
+}
+
+.stat-delta.positive {
+    background-color: var(--opaque-increase-color);
+    color: var(--increase-color);
+}
+
+.stat-delta.negative {
+    background-color: var(--opaque-decrease-color);
+    color: var(--decrease-color);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+}
+
+.health {
+    grid-row: 2 / 3;
+    grid-column: 7 / span 3;
+}
+
+.profile {
+    grid-row: 2 / 3;
+    grid-column: 10 / span 3;
+}
+
+.credit {
+    grid-row: 3 / 4;
+    grid-column: 1 / span 6;
+}
+
+.transfer {
+    grid-column: 7 / span 3;
+}
+
+.security {
+    grid-column: 10 / span 3;
+}
+
+.card {
+    padding: 2rem;
+}
+
+section .card:not(.balance) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card > :first-child {
+    flex: 0 0 auto;
+}
+
+.card > :not(:first-child) {
+    flex: 1;
+}
+
+.card.profile {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.profile__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__stats {
+    display: flex;
+    justify-content: space-around; 
+    text-align: center;          
+    gap: 2rem;
+}
+
+.profile > .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+}
+
+.profile.button .profile__pic {
+    width: 3rem;
+    height: 3rem;
+}
+
+.profile__pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+.card-media-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 999px;
+    width: 64px;
+    height: 64px;
+}  
+
+.buttons {
+    border-radius: 999px;
+    background-color: var(--secondary-color);
+}
+
+.buttons__upper, .buttons__lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button:hover:not(.profile.button) {
+     background-color: black;
+     padding: 0.5rem;
+     border-radius: 4rem;
+}
+
+.button:hover .lucide{
+   
+    stroke: white;
+}
+
+.buttons .lucide {
+    width: 2rem;
+    height: 2rem;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+}
+
+.card.revenue {
+    background: linear-gradient(to right, var(--tertiary-color), var(--increase-color))
+}
+
+.card.revenue > div > * {
+    color: var(--secondary-color);
+}
+
+.chat, .notifications {
+    border-radius: 999rem;
+    align-self: center;
+}
+
+.card.health {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.health > .card-media-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.health > .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.buttons {
+    display: grid;
+    height: 100%;
+    align-content: space-between;
+    padding: 1rem;
+    justify-content: center ;
+}
+
+h4,p {
+    color: var(--subtle-color);
+    font-family: var(--secondary-font);
+}
+
+p {
+    font-size: 9px;
+}
+
+h2, h5 {
+    color: black;
+    font-family: var(--primary-font);
+    font-weight: 900;
+}
+
+/* Make the inline SVG used in the balance chart smaller and centered */
+.balance-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.balance-chart svg {
+    width: 100%; /* small visual size */
+    height: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+
+}
+
+section svg {
+    stroke: var(--tertiary-color);
+}
+
+.credit > .card-body {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.credit > .card-body button {
+    width: 10rem;
+    height: 3rem;
+    border-style: none;
+    border-radius: 1rem;
+    background: linear-gradient(to right, var(--tertiary-color), var(--increase-color));
+    color: var(--secondary-color);
+}
+
+.credit__card {
+    width: 100%;
+    height: 100%;
+}
+
+.transfer > .card-body {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.transfer > .card-body > .transfer__contents {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.transfer__title {
+    font-family: var(--secondary-font);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.transfer__item {
+    font-size: x-small;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transfer__name {
+    font-family: var(--secondary-font);
+    font-weight: 900;
+    font-size: 0.675rem;
+}
+
+.transfer__info {
+    padding-left: 0.5rem;
+    border-radius: 1px;
+    border-left-style: solid;
+    border-left-color: var(--increase-color) ;
+}
+
+.transfer__time {
+    color: var(--subtle-color);
+}
+
+.transfer__status {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    
+    border-radius: 0.5rem;
+}
+
+.transfer__status--positive {
+    color: var(--increase-color);
+    background-color: var(--opaque-increase-color);
+}
+
+.transfer__status--negative {
+    color: var(--decrease-color);
+    background-color: var(--opaque-decrease-color);
+}
+
+.security {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.security > .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.security > .card-body button {
+    width: 10rem;
+    height: 3rem;
+    border-style: none;
+    border-radius: 1rem;
+    background: linear-gradient(to right, var(--tertiary-color), var(--increase-color));
+    color: var(--secondary-color);
+}
