@@ -1,238 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="app">
-        <header>
-            <aside class="left-header">
-                <div class="logo buttons">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
-                </div>
-            </aside>
-            
-            <aside class="right-header">
-                <div class="header__greeting">
-                    <h2>Hello, Bryan</h2>
-                    <h4>Here are today's updates</h4>
-                </div>
-                <div class="right-header__controls">
-                    <div class="search">
-                        <input
-                            type="search"
-                            id="user_search"
-                            name="user_search"
-                            placeholder="Search…"
-                            aria-label="Search"
-                        />
-                        <button class="search__icon" aria-label="Submit search">
-                            <!-- simple magnifier (inline SVG) -->
-                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                            <circle cx="11" cy="11" r="7" stroke="currentColor" fill="none" stroke-width="2"/>
-                            <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="chat buttons">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more-icon lucide-message-circle-more"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
-                    </div>
-                    <div class="notifications buttons">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-dot-icon lucide-bell-dot"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M13.916 2.314A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.74 7.327A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673 9 9 0 0 1-.585-.665"/><circle cx="18" cy="8" r="3"/></svg>
-                    </div>
-                </div>
-            </aside>
-        </header>
+  <div class="app">
+    <!-- Header Section -->
+    <header>
+      <aside class="left-header">
+        <div class="logo buttons">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard">
+            <rect width="7" height="9" x="3" y="3" rx="1"/>
+            <rect width="7" height="5" x="14" y="3" rx="1"/>
+            <rect width="7" height="9" x="14" y="12" rx="1"/>
+            <rect width="7" height="5" x="3" y="16" rx="1"/>
+          </svg>
+        </div>
+      </aside>
+      
+      <aside class="right-header">
+        <div class="header__greeting">
+          <h2>Hello, Bryan</h2>
+          <h4>Here are today's updates</h4>
+        </div>
+        <div class="right-header__controls">
+          <div class="search">
+            <input
+              type="search"
+              id="user_search"
+              name="user_search"
+              placeholder="Search…"
+              aria-label="Search"
+            />
+            <button class="search__icon" aria-label="Submit search">
+              <!-- Search magnifier icon -->
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" fill="none" stroke-width="2"/>
+                <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="chat buttons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more-icon lucide-message-circle-more">
+              <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/>
+              <path d="M8 12h.01"/>
+              <path d="M12 12h.01"/>
+              <path d="M16 12h.01"/>
+            </svg>
+          </div>
+          <div class="notifications buttons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-dot-icon lucide-bell-dot">
+              <path d="M10.268 21a2 2 0 0 0 3.464 0"/>
+              <path d="M13.916 2.314A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.74 7.327A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673 9 9 0 0 1-.585-.665"/>
+              <circle cx="18" cy="8" r="3"/>
+            </svg>
+          </div>
+        </div>
+      </aside>
+    </header>
 
-        <nav>
-            <div class="buttons">
-                <div class="buttons__upper">
-                    <div class="dashboard button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
-                    <div class="news button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper-icon lucide-newspaper"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg></div>
-                    <div class="stats button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column-big-icon lucide-chart-column-big"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><rect x="15" y="5" width="4" height="12" rx="1"/><rect x="7" y="8" width="4" height="9" rx="1"/></svg></div>
-                    <div class="org button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></div>
-                    <div class="team button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></div>
-                    <div class="calendar button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-icon lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></div>
-                </div>
-                <div class="buttons__lower">
-                    <div class="settings button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg></div>
-                    <div class="logout button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg></div>
-                    <div class="profile button"><img src="assets/soitnightdp.jpg" alt="Bryan's Profile Picture" class="profile__pic"></div>
-                </div>
-            </div> 
-        </nav>
+    <!-- Navigation Section -->
+    <nav>
+      <div class="buttons">
+        <div class="buttons__upper">
+          <div class="dashboard button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house">
+              <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+              <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+          </div>
+          <div class="news button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper-icon lucide-newspaper">
+              <path d="M15 18h-5"/>
+              <path d="M18 14h-8"/>
+              <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/>
+              <rect width="8" height="4" x="10" y="6" rx="1"/>
+            </svg>
+          </div>
+          <div class="stats button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column-big-icon lucide-chart-column-big">
+              <path d="M3 3v16a2 2 0 0 0 2 2h16"/>
+              <rect x="15" y="5" width="4" height="12" rx="1"/>
+              <rect x="7" y="8" width="4" height="9" rx="1"/>
+            </svg>
+          </div>
+          <div class="org button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2">
+              <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+              <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+              <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+              <path d="M10 6h4"/>
+              <path d="M10 10h4"/>
+              <path d="M10 14h4"/>
+              <path d="M10 18h4"/>
+            </svg>
+          </div>
+          <div class="team button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <path d="M16 3.128a4 4 0 0 1 0 7.744"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <circle cx="9" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div class="calendar button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-icon lucide-calendar">
+              <path d="M8 2v4"/>
+              <path d="M16 2v4"/>
+              <rect width="18" height="18" x="3" y="4" rx="2"/>
+              <path d="M3 10h18"/>
+            </svg>
+          </div>
+        </div>
+        <div class="buttons__lower">
+          <div class="settings button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings">
+              <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <div class="logout button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out">
+              <path d="m16 17 5-5-5-5"/>
+              <path d="M21 12H9"/>
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            </svg>
+          </div>
+          <div class="profile button">
+            <img src="assets/soitnightdp.jpg" alt="Bryan's Profile Picture" class="profile__pic">
+          </div>
+        </div>
+      </div> 
+    </nav>
 
-        <section>
-                <div class="card expenses">
-                    <div class="card-body">
-                        <h4>Spent this month</h4>
-                        <h2>$682.5</h2>
-                    </div>
-                    <div class="card-media">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height=64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column-increasing-icon lucide-chart-column-increasing"><path d="M13 17V9"/><path d="M18 17V5"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M8 17v-3"/></svg>
-                    </div>
-                </div>
-                <div class="card clients">
-                    <div class="card-media-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
-                    </div>
-                    <div class="card-body">
-                        <h4>New Clients</h4>
-                        <h2>1,245</h2>
-                        <p>+5% this week</p>
-                    </div>
-                    <div class="card-media">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-squiggle-icon lucide-line-squiggle"><path d="M7 3.5c5-2 7 2.5 3 4C1.5 10 2 15 5 16c5 2 9-10 14-7s.5 13.5-4 12c-5-2.5.5-11 6-2"/></svg>
-                    </div>
-                </div>
-                <div class="card earnings">
-                     <div class="card-media-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign-icon lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <div class="card-body">
-                        <h4>Earnings</h4>
-                        <h2>$900.12</h2>
-                    </div>
-                </div>
-                <div class="card revenue">
-                    <div class="card-body">
-                        <h4>Revenue</h4>
-                        <h2>$4,320</h2>
-                        <p>+12% this month</p>
-                    </div>
-                    <div class="card-media">
-                        <svg viewBox="0 0 100 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- curve line -->
-                            <path d="M0,60 C30,70 50,30 80,40 C110,55 140,35 170,45 C200,60 230,50 260,55 C290,60 300,58"
-                                    stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="card balance">
-                    <div class="card-body">
-                        <div class="balance-header">
-                            <div class="balance-title">
-                                <h4>Balance</h4>
-                                <span class="status on-track">On track</span>
-                            </div>
-                            <div class="balance-range">Monthly ▾</div>
-                        </div>
+    <!-- Main Dashboard Section -->
+    <section>
+      <!-- Expenses Card -->
+      <div class="card expenses">
+        <div class="card-body">
+          <h4>Spent this month</h4>
+          <h2>$682.5</h2>
+        </div>
+        <div class="card-media">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column-increasing-icon lucide-chart-column-increasing">
+            <path d="M13 17V9"/>
+            <path d="M18 17V5"/>
+            <path d="M3 3v16a2 2 0 0 0 2 2h16"/>
+            <path d="M8 17v-3"/>
+          </svg>
+        </div>
+      </div>
 
-                        <div class="balance-stats">
-                            <div class="stat stat-saves">
-                                <div class="stat-label">Saves</div>
-                                <div class="stat-value">43.50%</div>
-                                <div class="stat-delta positive">+2.45%</div>
-                            </div>
-                            <div class="stat stat-balance">
-                                <div class="stat-label">Balance</div>
-                                <div class="stat-value">$52,422</div>
-                                <div class="stat-delta negative">-4.75%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-media">
-                        <div class="balance-chart">
-                            <!-- Simple sparkline-style SVG matching the screenshot shape -->
-                            <svg viewBox="0 0 300 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- curve line -->
-                                <path d="M0,60 C30,70 50,30 80,40 C110,55 140,35 170,45 C200,60 230,50 260,55 C290,60 300,58"
-                                    stroke="#2f8f6f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="card health">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-pulse-icon lucide-heart-pulse"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
-                    
-                    <div class="card-body">
-                        <h4>System Health</h4>
-                        <h2>Good</h2>
-                        <p>No issues detected</p>
-                    </div>
-                </div>
-                <div class="card profile">
-                    <div class="card-body">
-                        <div class="profile__info">
-                            <img src="assets/soitnightdp.jpg" alt="Bryan's Profile Picture" class="profile__pic">
-                            <div class="profile__contact">
-                                <h2>Bryan Reamillo</h2>
-                                <h4>bryanreamillo2403@gmail.com</h4>
-                            </div>
-                        </div>
-                        <div class="profile__stats">
-                            <div class="profile__projects">
-                                <h5>Projects</h5>
-                                <h4>26</h4>
-                            </div>
-                            <div class="profile__followers">
-                                <h5>Followers</h5>
-                                <h4>456</h4>
-                            </div>
-                            <div class="profile__following">
-                                <h5>Following</h5>
-                                <h4>308</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card credit">
-                    <div class="card-body">
-                        <h2>Available Credit Card in Wallet</h2>
-                        <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam eaque totam officia? Accusantium repudiandae adipisci similique quidem minus, harum cum laudantium atque fuga fugit, sint praesentium ipsum aliquam aliquid nam.</h4>
-                        <button>Add New Card +</button>
-                    </div>
-                    <div class="card-media">
-                        <img src="assets/creditcards.png" alt="Credit cards" class="credit__card">
-                    </div>
-                </div>
-               <div class="card transfer">
-                    <div class="card-body">
-                        <div class="transfer__title">Your Transfers</div>
+      <!-- Clients Card -->
+      <div class="card clients">
+        <div class="card-media-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <path d="M16 3.128a4 4 0 0 1 0 7.744"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <circle cx="9" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h4>New Clients</h4>
+          <h2>1,245</h2>
+          <p>+5% this week</p>
+        </div>
+        <div class="card-media">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-squiggle-icon lucide-line-squiggle">
+            <path d="M7 3.5c5-2 7 2.5 3 4C1.5 10 2 15 5 16c5 2 9-10 14-7s.5 13.5-4 12c-5-2.5.5-11 6-2"/>
+          </svg>
+        </div>
+      </div>
 
-                        <div class="transfer__contents">
-                            <div class="transfer__item">
-                                <div class="transfer__info">
-                                    <div class="transfer__name">From Anna Jones</div>
-                                    <div class="transfer__time">Today, 13:34</div>
-                                </div>
-                                <div class="transfer__status transfer__status--positive">+2.12%</div>
-                            </div>
+      <!-- Earnings Card -->
+      <div class="card earnings">
+        <div class="card-media-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign-icon lucide-dollar-sign">
+            <line x1="12" x2="12" y1="2" y2="22"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h4>Earnings</h4>
+          <h2>$900.12</h2>
+        </div>
+      </div>
 
-                            <div class="transfer__item">
-                                <div class="transfer__info">
-                                    <div class="transfer__name">To Carlos Brown III</div>
-                                    <div class="transfer__time">Today, 15:23</div>
-                                </div>
-                                <div class="transfer__status transfer__status--negative">-4.75%</div>
-                            </div>
+      <!-- Revenue Card -->
+      <div class="card revenue">
+        <div class="card-body">
+          <h4>Revenue</h4>
+          <h2>$4,320</h2>
+          <p>+12% this month</p>
+        </div>
+        <div class="card-media">
+          <svg viewBox="0 0 100 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Revenue trend curve -->
+            <path d="M0,60 C30,70 50,30 80,40 C110,55 140,35 170,45 C200,60 230,50 260,55 C290,60 300,58"
+              stroke="#ffffff" 
+              stroke-width="2" 
+              fill="none" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <!-- Balance Card -->
+      <div class="card balance">
+        <div class="card-body">
+          <div class="balance-header">
+            <div class="balance-title">
+              <h4>Balance</h4>
+              <span class="status on-track">On track</span>
+            </div>
+            <div class="balance-range">Monthly ▾</div>
+          </div>
 
-                            <div class="transfer__item">
-                                <div class="transfer__info">
-                                    <div class="transfer__name">From Joel Cannan</div>
-                                    <div class="transfer__time">Today, 17:54</div>
-                                </div>
-                                <div class="transfer__status transfer__status--positive">+2.45%</div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+          <div class="balance-stats">
+            <div class="stat stat-saves">
+              <div class="stat-label">Saves</div>
+              <div class="stat-value">43.50%</div>
+              <div class="stat-delta positive">+2.45%</div>
+            </div>
+            <div class="stat stat-balance">
+              <div class="stat-label">Balance</div>
+              <div class="stat-value">$52,422</div>
+              <div class="stat-delta negative">-4.75%</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-media">
+          <div class="balance-chart">
+            <!-- Balance chart sparkline -->
+            <svg viewBox="0 0 300 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0,60 C30,70 50,30 80,40 C110,55 140,35 170,45 C200,60 230,50 260,55 C290,60 300,58"
+                stroke="#2f8f6f" 
+                stroke-width="2" 
+                fill="none" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
 
-                <div class="card security">
-                    <div class="card-media">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fingerprint-icon lucide-fingerprint"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/><path d="M14 13.12c0 2.38 0 6.38-1 8.88"/><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/><path d="M2 12a10 10 0 0 1 18-6"/><path d="M2 16h.01"/><path d="M21.8 16c.2-2 .131-5.354 0-6"/><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"/><path d="M8.65 22c.21-.66.45-1.32.57-2"/><path d="M9 6.8a6 6 0 0 1 9 5.2v2"/></svg>
-                    </div> 
-                    <div class="card-body">
-                        <h2>Keep you safe!</h2>
-                        <h4>Update your security password</h4>
-                        <button>Update your security</button>
-                    </div>
-                </div>
-        </section>
-    </div>
+      <!-- System Health Card -->
+      <div class="card health">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-pulse-icon lucide-heart-pulse">
+          <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/>
+          <path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/>
+        </svg>
+        <div class="card-body">
+          <h4>System Health</h4>
+          <h2>Good</h2>
+          <p>No issues detected</p>
+        </div>
+      </div>
+
+      <!-- User Profile Card -->
+      <div class="card profile">
+        <div class="card-body">
+          <div class="profile__info">
+            <img src="assets/soitnightdp.jpg" alt="Bryan's Profile Picture" class="profile__pic">
+            <div class="profile__contact">
+              <h2>Bryan Reamillo</h2>
+              <h4>bryanreamillo2403@gmail.com</h4>
+            </div>
+          </div>
+          <div class="profile__stats">
+            <div class="profile__projects">
+              <h5>Projects</h5>
+              <h4>26</h4>
+            </div>
+            <div class="profile__followers">
+              <h5>Followers</h5>
+              <h4>456</h4>
+            </div>
+            <div class="profile__following">
+              <h5>Following</h5>
+              <h4>308</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credit Card -->
+      <div class="card credit">
+        <div class="card-body">
+          <h2>Available Credit Card in Wallet</h2>
+          <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam eaque totam officia? Accusantium repudiandae adipisci similique quidem minus, harum cum laudantium atque fuga fugit, sint praesentium ipsum aliquam aliquid nam.</h4>
+          <button>Add New Card +</button>
+        </div>
+        <div class="card-media">
+          <img src="assets/creditcards.png" alt="Credit cards" class="credit__card">
+        </div>
+      </div>
+
+      <!-- Transfers Card -->
+      <div class="card transfer">
+        <div class="card-body">
+          <div class="transfer__title">Your Transfers</div>
+          <div class="transfer__contents">
+            <div class="transfer__item">
+              <div class="transfer__info">
+                <div class="transfer__name">From Anna Jones</div>
+                <div class="transfer__time">Today, 13:34</div>
+              </div>
+              <div class="transfer__status transfer__status--positive">+2.12%</div>
+            </div>
+
+            <div class="transfer__item">
+              <div class="transfer__info">
+                <div class="transfer__name">To Carlos Brown III</div>
+                <div class="transfer__time">Today, 15:23</div>
+              </div>
+              <div class="transfer__status transfer__status--negative">-4.75%</div>
+            </div>
+
+            <div class="transfer__item">
+              <div class="transfer__info">
+                <div class="transfer__name">From Joel Cannan</div>
+                <div class="transfer__time">Today, 17:54</div>
+              </div>
+              <div class="transfer__status transfer__status--positive">+2.45%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Security Card -->
+      <div class="card security">
+        <div class="card-media">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fingerprint-icon lucide-fingerprint">
+            <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/>
+            <path d="M14 13.12c0 2.38 0 6.38-1 8.88"/>
+            <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/>
+            <path d="M2 12a10 10 0 0 1 18-6"/>
+            <path d="M2 16h.01"/>
+            <path d="M21.8 16c.2-2 .131-5.354 0-6"/>
+            <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"/>
+            <path d="M8.65 22c.21-.66.45-1.32.57-2"/>
+            <path d="M9 6.8a6 6 0 0 1 9 5.2v2"/>
+          </svg>
+        </div> 
+        <div class="card-body">
+          <h2>Keep you safe!</h2>
+          <h4>Update your security password</h4>
+          <button>Update your security</button>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
